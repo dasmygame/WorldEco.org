@@ -5,6 +5,6 @@ Responsive web design, smooth scrolling, login/logout function, user community, 
 
 https://worldeco.org/
 
-![dash](Screen Shot 2019-06-25 at 10.47.53 PM.png)
-![head](Screen Shot 2019-06-25 at 10.47.01 PM.png)
-![login](Screen Shot 2019-06-25 at 10.47.35 PM.png)
+![dash](/Screen Shot 2019-06-25 at 10.47.53 PM.png)
+![head](/Screen Shot 2019-06-25 at 10.47.01 PM.png)
+![login](/Screen Shot 2019-06-25 at 10.47.35 PM.png)
