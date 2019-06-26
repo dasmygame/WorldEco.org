@@ -1,0 +1,83 @@
+<?php
+include 'class.phpmailer.php';
+/*
+$mail = new PHPMailer(); // create a new object
+$mail->IsSMTP(); // enable SMTP
+$mail->SMTPDebug =2; // debugging: 1 = errors and messages, 2 = messages only
+$mail->SMTPAuth = true; // authentication enabled
+//$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+$mail->Host = "mail.worldeco.org";
+$mail->Port = 25; // or 587
+$mail->IsHTML(true);
+$mail->Username = 'contact@worldeco.org';
+$mail->Password = 'testtest';
+$mail->SetFrom("contact@worldeco.org");
+$mail->Subject = "Test";
+$mail->Body = "hello";
+$mail->AddAddress("developer.l4logics@gmail.com");
+
+ if(!$mail->Send()) {
+    echo "Mailer Error: " . $mail->ErrorInfo;
+ } else {
+    echo "Message has been sent";
+ }
+
+*/
+include("class.smtp.php");
+
+
+$mail = new PHPMailer(); // the true param means it will throw exceptions on errors
+
+
+ 
+
+
+
+try {
+
+
+$mail->IsSMTP(); // telling the class to use SMTP
+
+
+$mail->Host       = "mail.worldeco.org";
+$mail->SMTPDebug  = 2;                     // enables SMTP debug information (for testing)
+
+$mail->SMTPAuth   = true;  
+               // enable SMTP authentication
+
+//$mail -> SMTPSecure = 'ssl';
+
+$mail->Port       = 25;                    // set the SMTP port for the GMAIL server
+
+$mail->Username   = "contact@worldeco.org"; // SMTP account username
+
+$mail->Password   = "testtest";        // SMTP account password
+
+$mail->AddReplyTo('developer.l4logics@gmail.com', 'First Last');
+
+$mail->AddAddress('developer.l4logics@gmail.com', 'John Doe');
+
+$mail->SetFrom('contact@worldeco.org', 'First Last');
+
+
+$mail->Subject = 'PHPMailer Test Subject via mail(), advanced';
+
+$mail->AltBody = 'To view the message, please use an HTML compatible email viewer!'; // optional - MsgHTML will create an alternate automatically
+
+$mail->MsgHTML('test');
+
+
+$mail->Send();
+
+echo "Message Sent OK<p></p>\n";
+
+} catch (phpmailerException $e) {
+echo $e->errorMessage(); //Pretty error messages from PHPMailer
+
+} catch (Exception $e) {
+
+echo $e->getMessage(); //Boring error messages from anything else!
+
+}
+
+?>
