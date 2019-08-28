@@ -1,5 +1,5 @@
 # WorldEco.org
-A website for an environmental non-profit
+A website for my environmental non-profit. Users sign up and create a profile to complete offers. Offers turn into cash on a CPA backend, the money generated is turned into points on their account. With their points they can use those points to donate to environmental causes on web-crowdfunding platforms. Money donated on WorldEco as of SEPTEMBER 2019 : $268.37 
 
 Responsive web design, smooth scrolling, login/logout function, user community, user dashboard, user points and offer.
 
